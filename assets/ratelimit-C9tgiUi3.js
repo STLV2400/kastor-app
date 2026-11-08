@@ -1,0 +1,1 @@
+const n=new Map;function a(t,r,o){const s=Date.now(),e=n.get(t);return!e||e.resetAt<s?(n.set(t,{n:1,resetAt:s+o}),{ok:!0,retryInMin:0}):(e.n+=1,e.n>r?{ok:!1,retryInMin:Math.max(1,Math.ceil((e.resetAt-s)/6e4))}:{ok:!0,retryInMin:0})}function i(t){n.delete(t)}setInterval(()=>{const t=Date.now();for(const[r,o]of n)o.resetAt<t&&n.delete(r)},10*6e4).unref?.();export{i as a,a as r};

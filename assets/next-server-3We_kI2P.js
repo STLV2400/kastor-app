@@ -1,0 +1,1 @@
+class t extends Response{static json(s,e){return new Response(JSON.stringify(s),{...e,headers:{"content-type":"application/json",...e?.headers??{}}})}static redirect(s,e=307){return new Response(null,{status:e,headers:{location:String(s)}})}static next(){return new Response(null)}}export{t as N};

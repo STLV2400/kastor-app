@@ -1,0 +1,1 @@
+import{e as r,n as t,N as a}from"./index-ChgBQPgY.js";function s(i){return async function(...o){try{return await i(...o)}catch(n){if(n instanceof r){t(n.url),window.scrollTo(0,0);return}if(n instanceof a){t("/404");return}throw n}}}export{s as w};
